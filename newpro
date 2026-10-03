@@ -1,1 +1,230 @@
+======================Test Sum==========================03-10-2026.
+package OopsPractise;
+//1.Create a class Calculator with the following methods:
+//calculateSum(int number1, int number2) to calculate the sum of two numbers.
+//calculateDifference(int number1, int number2) to calculate the difference between two numbers
+public class OopsSum1 {
+// attributes.
+	int a=25;
+	int b=50;
+	
+//method.
+	public void show() {
+		System.out.println("Method is working");
+	}
+//Constructor initialized.
+//	OopsSum1(){
+//		int c=a+b;
+//		System.out.println(c);
+//		System.out.println("Constractor is activated......");
+		
+		OopsSum1(int a,int b){
+			System.out.println(a+b);
+			System.out.println(a-b);
+		}
+
+ public static void main(String[] args) {
+	 OopsSum1 s=new  OopsSum1(100,250);
+	 s.show();
+	
+
+	}
+
+}
+=======================2.sum======================
+package OopsPractise;
+//2.Create a class Employee with overloaded constructors to initialize employee details based on different combinations of arguments. Ensure the constructors support the creation of objects in various ways.
+public class Oopssum2 {
+//	attributes.
+	private  String Name;
+	private  String Designation;
+	private long Salary;
+	public String getDesignation() {
+		return Designation;
+	}
+
+
+	public void setDesignation(String designation) {
+		Designation = designation;
+	}
+
+	public String getName() {
+		return Name;
+	}
+
+
+	public void setName(String name) {
+		Name = name;
+	}
+
+  public long getSalary() {
+		return Salary;
+	}
+
+
+	public void setSalary(long salary) {
+		Salary = salary;
+	}
+
+
+	public static void main(String[] args) {
+		Oopssum2 em=new Oopssum2();
+		em.setName("Ramu");
+		em.setDesignation("Manager");
+		em.setSalary(50000L);
+		Oopssum2 e=new Oopssum2();
+		e.setName("Samy");
+		e.setDesignation("Assitant Manager");
+		e.setSalary(35000L);
+		
+		Oopssum2 tt=new Oopssum2();
+		tt.setName("Devi");
+		tt.setDesignation("Accountant");
+		tt.setSalary(20000L);
+		Oopssum2 ll=new Oopssum2();
+		ll.setName("Guna");
+		ll.setDesignation("Labour");
+		ll.setSalary(10000L);
+		
+		System.out.println("Employeename:"+em.getName());
+		System.out.println("EmployeeDesignation:"+em.getDesignation());
+		System.out.println("Employee Salary:"+em.getSalary());
+		System.out.println("Employeename:"+e.getName());
+		System.out.println("EmployeeDesignation:"+e.getDesignation());
+		System.out.println("Employee Salary:"+e.getSalary());
+		System.out.println("Employeename:"+tt.getName());
+		System.out.println("EmployeeDesignation:"+tt.getDesignation());
+		System.out.println("Employee Salary:"+tt.getSalary());
+		System.out.println("Employeename:"+ll.getName());
+		System.out.println("EmployeeDesignation:"+ll.getDesignation());
+		System.out.println("Employee Salary:"+ll.getSalary());
+
+	}
+
+}
+========================3.sum===============================
+package OopsPractise;
+//3.Create a Student class with name, rollNo, and marks as attributes. Write a method to calculate the grade based on the marks and display the grade. Create multiple instances of the Student class and print their grades.
+public class Oopssum3 {
+//Attributes.
+	String name;
+	int rollno;
+	int marks;
+	Oopssum3() {
+		name="ranjith";
+		rollno=101;
+		marks=55;
+		System.out.println("Constructor is Created...........");
+		System.out.println("Name:"+name);
+		System.out.println("Rollno:"+rollno);
+		System.out.println("marks:"+marks);
+	}
+//parameter Constructor.
+		Oopssum3(String name,int rollno,int marks){
+			System.out.println("Constructor is created");
+			System.out.println("Name:"+name);
+			System.out.println("Rollno:"+rollno);
+			System.out.println("marks:"+marks);
+			
+		}
+		
+public static void main(String[] args) {
+	Oopssum3 e=new Oopssum3("ranjith",101,55);
+	
+	
+
+		
+}
+
+}
+===================Inheritance Practise=================
+package OopsPractise;
+class parent{
+	int rollno=103;
+	String name="ragu";
+	public void show() {
+		System.out.println("Parent class method is created.....");
+	}
+}
+class child extends parent{
+	public void show() {
+		String name="ramu";
+		System.out.println("child class method is ceated");
+		System.out.println("name of  childbe:"+super.name);
+		System.out.println("name of  currentchild:"+name);
+	}
+	
+}
+public class Inheritancepractise {
+
+	public static void main(String[] args) {
+//Object.
+		child b=new child();
+		b.show();
+		
+
+	}
+
+}
+
+==================Polymorphism Practise=================
+package OopsPractise;
+class Animal{
+	String animal="Lion";
+	void roar() {
+		System.out.println("Lion is roaring overthe jungle");
+	}
+}
+class Lioness extends Animal{
+	void roar(String lioness) {
+		System.out.println("Lioness name is"+lioness);
+	}
+
+
+public static void main(String[] args) {
+Lioness L=new Lioness();
+L.roar("Isabelle");
+L.roar();
+
+	}
+
+}
+
+===================Constractor Practise=================
+package OopsPractise;
+//Constructor overloading ,same name but Different Signature of parameter.
+public class PractiseConstructor {
+// Constructor.
+	PractiseConstructor(){
+		System.out.println("Default Constructor");
+	}
+	PractiseConstructor(int a,int b){
+		int c=a*b;
+		System.out.println("Product:"+c);
+	}
+	PractiseConstructor(int x,float d){
+		float y=(float)x+d;
+		System.out.println("sum"+y);
+	}
+	PractiseConstructor(String name,long price){
+		System.out.println("Car Brandname"+name);
+		System.out.println("Car price"+price);
+		
+	}
+	public static void main(String[] args) {
+		PractiseConstructor p=new  PractiseConstructor();
+		PractiseConstructor p1=new PractiseConstructor(10,20);
+		PractiseConstructor p2=new PractiseConstructor(10,10.4f);
+		PractiseConstructor p3=new PractiseConstructor("Rolls Royce",100000L);
+		}
+
+}
+
+
+
+
+
+
+
+
 
