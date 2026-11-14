@@ -886,7 +886,48 @@ public class Oopssumpractise {
 		
 	}
 }
+
+ import java.util.Scanner;
+ class Main {
+   public static void main(String[] args) {
+        Scanner Sc=new Scanner(System.in);
+        System.out.println("Enter Unit :");
+        int units=Sc.nextInt();
+        double amt=0;
+       
+        if(units>=200)
+   	 {
+    	 amt=units*(3.5);
+    	      
+     }
+     else if( units>=300)
+     {
+    	 amt+=units*(4.5);
+    	
+          
+     }
+     else 
+     {
+    	 amt+=units*(5.5);
+     } 
+       
+      System.out.println("Total amt"+amt);
+        
+if(amt>4000)
+{System.out.println("Warrng");
+ 
+}
+else if (amt>2000){
+    System.out.println("Normal");
+}
+       else{
+           System.out.println("low");
+       }
+   }
+ }
 			
+		
+    
 		
     
 
