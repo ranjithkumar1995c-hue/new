@@ -925,6 +925,49 @@ else if (amt>2000){
        }
    }
  }
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+
+         Scanner sc = new Scanner(System.in);
+        // int i=0;
+        // while (i<=5)
+        //     {
+        //         System.out.println(i);
+        //         i++;
+        //     }
+        int a,b,c;
+        while(true){
+            System.out.println("Enter your choice"); 
+        int choice = sc.nextInt();
+        if(choice ==1)
+        {
+       
+         System.out.println("Enter your a ");
+         a = sc.nextInt();
+       System.out.println("Enter your b: ");
+         b = sc.nextInt();
+        
+         c=a+b;
+        System.out.println("Addition"  +c);
+        }
+
+            elseif(choice==2)
+         {
+         System.out.println("Enter your a ");
+         a = sc.nextInt();
+       System.out.println("Enter your b: ");
+         b = sc.nextInt();
+         c=a-b;
+        System.out.println("subtraction"  -c);
+        }
+                
+        }
+        else{
+          System.out.println("Not applicable");
+        }}      
+}}
 			
 		
     
