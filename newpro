@@ -859,7 +859,36 @@ public class Oopssumpractise {
 	} 
 	} 
 	}
-
+ import java.util. *;
+ class Main {
+   public static void main(String[] args) {
+        Scanner Sc=new Scanner(System.in);
+        int units=Sc.nextInt();
+        double amt=0;
+   
+        if(units>=300 || units<=200)
+   	 {
+    	 amt=units*(3.5);
+    	 
+    	 System.out.println(amt);
+     }
+     else if(units>200 || units<=100)
+     {
+    	 amt+=units*(2.5);
+    	 System.out.println(amt);
+     }
+     else if(units<100)
+     {
+    	 amt+=units*(1.5);
+    	 System.out.println(amt);
+   }
+			
+		
+	}
+}
+			
+		
+    
 
 
 
